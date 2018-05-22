@@ -6,11 +6,12 @@
     <title>in-DataLAB Data driven insight</title>
     <link rel="shortcut icon" href="img/idl_favicon.ico">
 
-    <meta name="description" content="인데이터랩 회사 소개 페이지">
-    <meta name="keywords" content="인데이터랩, 인 데이터랩, in-DataLAB, indatalab, in-datalab, 모카, moqa, 모두의 QnA, 모두의 QnA, 빅데이터, 스타트업, 리서치, 설문조사, 모바일, 모바일 설문, 모바일 설문 조사">
+    <meta name="description" content="인데이터랩 회사소개">
+    <meta name="keywords" content="인데이터랩, 인 데이터랩, in-DataLAB, indatalab, in-datalab, 모카, moqa, 모두의 QnA, 모두의 Q&A, 빅데이터, 스타트업, 리서치, 설문조사, 모바일, 모바일 설문, 모바일 설문 조사">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="style.css">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109145159-2"></script>
     <script>
@@ -20,8 +21,7 @@
 
       gtag('config', 'UA-109145159-2');
     </script>
-    
-    
+
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
@@ -32,7 +32,7 @@
   
   <div class="probootstrap-loader"></div>
 
-  <header role="banner" class="probootstrap-header">
+  <header role="banner" class="probootstrap-header nav-menu">
     <div class="container">
         <a href="/index.html" class="probootstrap-logo">
           <img src="img/1_main_section/logo_idl.png"/>
@@ -218,47 +218,51 @@
 
   <!--Partners-->
   <section class="probootstrap-section" id="partners">
-      <div class="container">
-        <div class="row">  
-          <div class="col-md-3">
-            <h2>Partners</h2>
-          </div>  
-          <div class="partners_icon col-md-3">
+    <div class="container">
+      <div class="row">  
+        <div class="col-lg-3 col-md-12">
+          <h2>Partners</h2>
+        </div>  
+        <div class="col-lg-9 col-md-12">
+      <!-- First row -->
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
             <img src="img/4_partners_section/logo_innocean.png">
           </div>
-          <div class="partners_icon col-md-3">
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
             <img src="img/4_partners_section/logo_softBankGroup.png">
           </div>            
-          <div class="partners_icon col-md-3">
-            <img src="img/4_partners_section/logo_AWS.png">
-          </div>
-          <div class="partners_icon col-md-3">
-            <img src="img/4_partners_section/logo_yakult.png">
-          </div>
-          <div class="partners_icon col-md-3">
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
             <img src="img/4_partners_section/logo_globalResearch.png">
+          </div>
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <img src="img/4_partners_section/logo_yakult.png">
+          </div> 
+      <!-- Second row -->
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <img src="img/4_partners_section/logo_AWS.png">
           </div>            
-          <div class="partners_icon col-md-3">
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
             <img src="img/4_partners_section/logo_dreamPlus.png">
           </div>
-          <div class="partners_icon col-md-3">
+          <div class="partners_icon col-lg-3 col-md-4 col-sm-6 col-xs-6">
             <img src="img/4_partners_section/logo_kci.png">
           </div>
-        </div><!-- END row -->
-      </div><!-- END container -->
-    </section> <!--Partners-->      
+        </div> <!--Wrapper-->
+      </div><!-- END row -->
+    </div><!-- END container -->
+  </section> <!--Partners-->      
 
   <section class="probootstrap-section" id="contact">
     <footer class="probootstrap-footer">
       <div class="probootstrap-footer-section">
           <div class="container">
             <div class="row">
-              <div class="col-lg-2 col-md-4 col-sm-12">
+              <div class="col-lg-3 col-md-12 col-sm-12">
                 <div class="probootstrap-footer-widget">
                   <h2>Contact</h2>
                 </div>
               </div>
-              <div class="col-lg-5 col-md-4 col-sm-12">
+              <div class="col-lg-5 col-md-6 col-sm-12">
                 <div class="probootstrap-link-wrap probootstrap-footer-widget">
                   <h3>SEOUL</h3>
                     <ul>
@@ -291,7 +295,7 @@
                     </ul>
                 </div>
               </div>
-              <div class="col-lg-5 col-md-4 col-sm-12">
+              <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="probootstrap-link-wrap probootstrap-footer-widget">
                   <h3>TOKYO</h3>
                     <ul>
@@ -331,18 +335,23 @@
   </div> 
 <!-- footer -->
   <div class="container" id="footer">
-    <div class="row footer_row">
-      <div class="footer_box col-md-3 col-sm-6 col-xs-12">
-          <a href="#home"><img src="img/6_footer_section/logo_footer.png"/></a>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-4">
+        <img class="footer_box_first" src="img/6_footer_section/logo_footer.png">
       </div>
-      <div class="footer_box col-md-3 col-sm-6 col-xs-12">
-        <p class="footer_box_p"><a href="/userAgreement.html">이용약관</a></p>
-        <p class="footer_box_p"><a href="/privacy.html">개인정보처리방침</a></p>
-      </div> 
-      <div class="footer_box col-md-6 col-sm-12 col-xs-12">
-        <p class="footer_copyright">Copyright by&nbsp;<strong>in-DataLAB</strong> &nbsp; All rights reserved </p>
-      </div>              
-     </div>  
+      <div class=" col-md-4 col-sm-6 col-xs-8">  
+        <div class="footer_box_middle">
+          <span class="footer_box_span"><a href="/userAgreement.html">이용약관</a></span>
+          <span class="footer_box_span"><a href="/privacy.html">개인정보처리방침</a></span>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-12 col-xs-12">
+        <hr>
+        <div class="footer_box_last">
+          <p class="footer_copyright">Copyright by&nbsp;<strong>in-DataLAB</strong> &nbsp; All rights reserved </p>
+        </div> 
+      </div>
+    </div>  
   </div>    
 
 <!-- GotoTop  
@@ -358,6 +367,7 @@
       <li><a href="#"><i class="icon-dribbble"></i></a></li>
       <li><a href="#"><i class="icon-instagram2"></i></a></li>
     </ul> -->
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/main.js"></script>

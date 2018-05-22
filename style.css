@@ -79,12 +79,12 @@ small, .font_small {
 }
 
 p, ul, ol, figure {
+  list-style: none;
 }
 
 a {
   -webkit-transition: .3s all;
   transition: .3s all;
-  color: #f4bd00;
 }
 
 a:hover, a:focus, a:active {
@@ -121,7 +121,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   padding-bottom: 30px;
   width: 100%;
   z-index: 12;
-  position: absolute;
+  position: fixed;
 }
 
 
@@ -243,6 +243,23 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   opacity: 1;
   visibility: visible;
 }
+/* Menuscroll */
+.nav-menu {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-menu.is-scrolling,
+.nav-menu.menu-is-open {
+    background-color: #000;
+    -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.is-scrolling {
+    padding: 10px 0;
+}
 
 /*2.4 - Header.Menu.nav*/
 
@@ -269,6 +286,11 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   list-style: none;
   display: inline;
   font-size: 18px;
+  color: #fff;
+}
+
+.probootstrap-mobile-menu-active .probootstrap-main-nav ul {
+  list-style: none;
 }
 
 .probootstrap-mobile-menu-active .probootstrap-main-nav li {
@@ -2296,44 +2318,43 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   .partners_icon{
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 2vh 0;
+  }
+
+  .partners_icon img{
     max-width: 200px;
     max-height: 40px;
-    margin: 20px 20px 20px 20px;
-  }
-  .partners_icon img{
     width: auto;
-    height: 100%;
+    height: 14vh;
   }
 /* Contact */
-  .footer_row{
-    display: flex;
-    align-items: center;
-  }
-  .footer_box{
-    font-size: 0.8em;
+/*  .footer_box{
+    font-size: 0.85em;
     font-family: 'Spoqa Han Sans';
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .footer_box_p{
+  }*/
+
+  .footer_box_span{
     margin-left: 10px;
     margin-right: 10px;
   }
-  .footer_box_p a{
+  .footer_box_span a{
     color: #2e2d2d;
   }
   .ml{
     margin-left: 20px;
   }
+  hr{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff !important;
+  }
   .footer_copyright{
-    display: flex;
-    justify-content: flex-end;
+    float: right;
   }
 
-
-  /* Responsive for d-flex*/
-
+  /* Responsive */
   @media screen and (min-width: 1200px) {
     #footer{
       margin-top: 6em;
@@ -2414,24 +2435,32 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
     #partners{
       padding-top: 1em;
       padding-bottom: 1em;
-      background-image: url(img/4_partners_section/m.partners_background.jpg) 
+      background-image: url(img/4_partners_section/partners_background.jpg) 
     }    
     #contact{
       background-image: none;
       padding-top: 3em;
       padding-bottom: 3em;
     }
-    .footer_row{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .footer_box_first{
+      width: 140px;
+      margin-top: 18px;
+      margin-bottom: 18px;
     }
-    .footer_box{
-      font-size: 0.8em;
-      font-family: 'Spoqa Han Sans';
+    .footer_box_middle{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+    hr{
+      display: block;
+    }
+    .footer_box_last{
       display: flex;
       justify-content: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
   }
   @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -2489,19 +2518,43 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
       padding-top: 1em;
       padding-bottom: 1em;
     }
-
-    .footer_row{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    #footer{
+      background-color: #0149cb;
     }
-    .footer_box{
-      font-size: 0.85em;
-      font-family: 'Spoqa Han Sans';
+    .footer_box_first{
       display: flex;
       justify-content: center;
-    }    
+      width: 140px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+    #footer img{
+      content: url(img/6_footer_section/m_logo_footer.png);
+    }
+    .footer_box_middle{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+    .footer_box_span{
+      margin-left: 10px;
+    } 
+    .footer_box_span a{
+      font-size: 16px;
+      color: #fff;
+    }   
+    hr{
+      display: block;
+    }     
+    .footer_box_last{
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
   @media screen and (max-width: 480px) {
     .ml{
@@ -2551,24 +2604,57 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
     #partners{
       padding-top:2em; 
       padding-bottom:2em;
-      background-image: url(img/4_partners_section/m.partners_background.jpg) 
+      background-image: url(img/4_partners_section/m.partners_background.jpg); 
+    }
+    .partners_icon img{
+      max-height: 30px;
     }
     #contact{
       background-image: none;
       padding-top: 1em;
       padding-bottom: 1em;
+    }
+    #footer{
+      background-color: #0149cb;
     }     
-    .footer_row{
+    .footer_box_first{
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 100px;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-    .footer_box{
-      font-size: 0.8em;
-      font-family: 'Spoqa Han Sans';
+    #footer img{
+      content: url(img/6_footer_section/m_logo_footer.png);
+    }
+    .footer_box_middle{
       display: flex;
       justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .footer_box_span{
+      margin-right: 3px;
+      vertical-align: middle;
+    }
+    .footer_box_span a{
+      font-size: 14px;
+      color: #fff;
+    }
+    hr{
+      display: block;
+    }   
+    .footer_box_last{
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .footer_copyright{
+      color: #fff;
     }
   }
 
